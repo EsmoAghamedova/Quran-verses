@@ -11,7 +11,8 @@ async function randomVerse() {
         surah: data.surahName,
         ayah: ayahNo + 1,
         english: data.english[ayahNo],
-        arabic: data.arabic1[ayahNo]
+        arabic: data.arabic1[ayahNo],
+        audio: data.audio["1"].url
     }
 }
 
@@ -23,4 +24,7 @@ async function showVerse() {
     document.getElementById("english").textContent = verse.english
     document.getElementById("reference").textContent =
         verse.surah + " : " + verse.ayah
+    const audio = document.getElementById("audio")
+    audio.src = verse.audio
+    audio.play()
 }
