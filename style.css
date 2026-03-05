@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0d5a2a, #1a9d54);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 720px;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    margin-bottom: 35px;
+    font-size: 2.3rem;
+    letter-spacing: 1px;
+}
+
+.card {
+    background: white;
+    border-radius: 16px;
+    padding: 45px 40px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+    margin-bottom: 30px;
+    border-top: 5px solid #0d5a2a;
+    animation: fadeUp .5s ease;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Arabic verse */
+
+.arabic-text {
+    font-size: 2rem;
+    color: #0d5a2a;
+    line-height: 2;
+    direction: rtl;
+    margin-bottom: 25px;
+    font-family: "Amiri", "Scheherazade New", "Noto Naskh Arabic", serif;
+}
+
+/* English translation */
+
+.english-text {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+/* Surah reference */
+
+.reference-text {
+    font-size: .95rem;
+    color: #1a9d54;
+    font-weight: 600;
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1px solid #e6f3ec;
+}
+
+/* Button */
+
+.btn {
+    background: linear-gradient(135deg, #0d5a2a, #1a9d54);
+    color: white;
+    border: none;
+    padding: 14px 38px;
+    font-size: 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: .25s;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+}
+
+/* Mobile */
+
+@media(max-width:600px) {
+
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    .card {
+        padding: 30px 25px;
+    }
+
+    .arabic-text {
+        font-size: 1.6rem;
+    }
+
+    .english-text {
+        font-size: 1rem;
+    }
+
+}
